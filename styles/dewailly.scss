@@ -1,5 +1,6 @@
 @use './components/loader';
 @use './components/nav';
+@use './components/header';
 
 * {
     margin: 0;
@@ -16,7 +17,7 @@ html, body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     overflow: hidden!important;
     background-color: whitesmoke;
 }

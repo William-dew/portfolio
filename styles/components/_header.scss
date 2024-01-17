@@ -1,0 +1,14 @@
+@use '../bases/colors';
+@use '../bases/fonts';
+
+header {
+   height: 100vh;
+   width: 100vw;
+   background-color: blue;
+}
+
+.taille {
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+}

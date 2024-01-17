@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.querySelector(".toggle");
+    const menuTxt = document.getElementById("menuTxt");
     let isOpen = false;
 
     const timeline = gsap.timeline({ paused: true });
@@ -22,11 +23,25 @@ document.addEventListener("DOMContentLoaded", function() {
         if (isOpen) {
             timeline.reverse();
             console.log("1");
+            menuTxt.innerText = "Menu";
         } else {
             timeline.play();
             console.log("2");
+            menuTxt.innerText = "Fermez";
         }
 
         isOpen = !isOpen;
+    })
+
+    const nav = document.querySelector("nav");
+    const row = document.getElementsByClassName("row");
+    const backMenu = document.querySelector(".menu");
+    window.addEventListener("scroll", function() {
+        let h = window.scrollY;
+        nav.style.top = h + "px";
+        h+=50;
+        backMenu.style.position = "absolute";
+        backMenu.style.top = h + "px";
+        
     })
 });

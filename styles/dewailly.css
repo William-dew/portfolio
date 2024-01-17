@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #181818;
+  background-color: #323232;
 }
 .loader-container .loader {
   position: fixed;
@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: whitesmoke;
+  background-color: #F0F0F0;
 }
 
 .loader .counter {
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  color: #31525B;
+  color: #E6473C;
   padding: 2rem 4rem;
   font-size: 10vw;
   font-family: "Cormorant";
@@ -34,7 +34,7 @@
   top: 0;
   right: 0;
   padding: 2rem 4rem;
-  color: #31525B;
+  color: #E6473C;
   font-size: 1rem;
   font-family: "Cormorant";
   font-weight: lighter;
@@ -55,7 +55,7 @@
   width: 100%;
   height: 100%;
   background: none;
-  border: 1px solid #31525B;
+  border: 1px solid #E6473C;
   border-radius: 100%;
 }
 .loader .circles .circle-inner {
@@ -73,7 +73,7 @@
   width: 162.5px;
   height: 162.5px;
   background: none;
-  border: 1px solid #31525B;
+  border: 1px solid #E6473C;
   border-radius: 100%;
 }
 .loader .circles .block {
@@ -84,7 +84,7 @@
   height: 0;
   display: none;
   background: none;
-  border: 1px solid #31525B;
+  border: 1px solid #E6473C;
   transform-origin: bottom;
 }
 
@@ -109,15 +109,21 @@
     height: 100vh;
     overflow: hidden !important;
   }
+  .loader-container .counter {
+    justify-content: flex-start;
+    align-items: center;
+    height: 25%;
+  }
 }
 .menu-container {
   width: 100%;
   height: 100%;
+  position: relative;
   overflow: hidden;
 }
 
 .menu {
-  background-color: #191919;
+  background-color: #323232;
   width: 100%;
   top: 50px;
   height: calc(100vh - 50px);
@@ -167,14 +173,13 @@
   top: 0;
   left: 0;
   width: 105vw;
-  height: 100vh;
+  height: 200vh;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   transform: scale(1);
-  background-color: red;
 }
 .website-content h1 {
   position: absolute;
@@ -191,27 +196,76 @@
 nav {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 0px;
+  left: 0px;
   padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 50px;
   font-size: 20px;
-  background-color: #4861d1;
+  background-color: #323232;
+  border-bottom: 1px solid #F0F0F0;
+  font-family: "Inter";
+  text-transform: uppercase;
+  color: #F0F0F0;
 }
-nav .logo {
-  color: whitesmoke;
-  font-family: "Cormorant";
-  font-style: italic;
-  font-size: 0.75rem;
-  line-height: 1;
+nav h2, nav .contact-btn {
+  font-weight: 500;
+}
+nav .contact-btn {
+  font-family: "Cormorant" !important;
+}
+nav .contact-btn {
+  border: 1px solid #F0F0F0;
+  border-radius: 20px;
+  height: 70%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.25s ease;
+}
+nav .contact-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  transform: scale(0.8);
+  transition: all 0.25s ease;
+}
+nav .contact-btn h2 {
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+nav .contact-btn:hover {
+  cursor: pointer;
+}
+nav .contact-btn:hover i, nav .contact-btn:hover h2 {
+  color: #13CE0D;
+}
+nav .contact-btn:hover i {
+  animation: i-bounce 0.5s ease-in-out forwards;
+}
+@keyframes i-bounce {
+  from {
+    transform: translateY(0%) scale(0.8);
+  }
+  25% {
+    transform: translateY(-10%) scale(0.8);
+  }
+  75% {
+    transform: translateY(25%) scale(0.8);
+  }
+  to {
+    transform: translateY(0%) scale(0.8);
+  }
 }
 nav .toggle {
   font-family: "Poppins";
   margin: 0 auto;
   align-self: center;
-  color: whitesmoke;
+  color: #F0F0F0;
   background: none;
   outline: none;
   border: none;
@@ -225,7 +279,7 @@ nav .toggle {
 nav .toggle span {
   width: 100%;
   height: 3px;
-  background-color: white;
+  background-color: #F0F0F0;
   transition: all 0.3s;
 }
 nav .toggle span:first-child {
@@ -240,7 +294,7 @@ nav .toggle span:last-child {
 }
 nav .toggle p {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: all 0.5s ease;
 }
 nav .toggle:hover {
   cursor: pointer;
@@ -288,7 +342,28 @@ nav .toggle:hover span:last-child {
   .row {
     margin: 20px 0;
   }
+  nav {
+    padding: 0 0 0 15px;
+  }
+  nav h2 {
+    font-size: 1rem;
+  }
+  nav .contact-btn {
+    transform: scale(0.75);
+  }
 }
+header {
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+}
+
+.taille {
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -304,7 +379,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   overflow: hidden !important;
   background-color: whitesmoke;
 }
