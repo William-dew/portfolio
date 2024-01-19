@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function initMenuAnimation() {
     const toggleButton = document.querySelector(".toggle");
     const menuTxt = document.getElementById("menuTxt");
     let isOpen = false;
@@ -44,4 +44,5 @@ document.addEventListener("DOMContentLoaded", function() {
         backMenu.style.top = h + "px";
         
     })
-});
+};
+document.addEventListener("DOMContentLoaded", initMenuAnimation);
